@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LetsGo.App">
+    <Application.Resources>
+        <Color x:Key="PrimaryColor">#2196F3</Color>
+        <Color x:Key="SecondaryColor">#72acdb</Color>
+        <Color x:Key="ErrorColor">#d6322c</Color>
+        <Color x:Key="CorTextoSutil">#bdb5b6</Color>
+        <Color x:Key="CorTexto">#7a7475</Color>
+
+        <Style x:Key="Legenda1" TargetType="Label">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontFamily" Value="OpenSans-SemiBold" />
+        </Style>
+
+        <Style x:Key="Legenda2" TargetType="Label">
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <Style x:Key="Erro" TargetType="Label">
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="TextColor" Value="{StaticResource ErrorColor}" />
+        </Style>
+
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="#FFF"/>
+        </Style>
+
+        <Style x:Key="Conteudo" TargetType="StackLayout">
+            <Setter Property="Margin" Value="15,0" />
+        </Style>
+
+
+        <!-- #region Label -->
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="OpenSans-Regular" />
+            <Setter Property="TextColor" Value="{StaticResource CorTexto}" />
+        </Style>
+        <!-- #endregion Label -->
+
+        <!--#region Botao -->
+
+        <Style x:Key="BotaoPadrao" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
+        </Style>
+
+        <Style x:Key="FrameBotaoPrimario" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="4" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="HasShadow" Value="False" />
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+        </Style>
+
+        <Style x:Key="FrameBotaoSecundario" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="4" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="HasShadow" Value="False" />
+            <Setter Property="BorderColor" Value="{StaticResource SecondaryColor}"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="OpenSans-Bold" />
+        </Style>
+
+        <Style x:Key="BotaoPrimario" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="OpenSans-Bold" />
+            <Setter Property="TextColor" Value="#FFFFFF"/>
+        </Style>
+
+        <Style x:Key="BotaoSecundario" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="OpenSans-Bold" />
+            <Setter Property="TextColor" Value="{StaticResource SecondaryColor}"/>
+            <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+        </Style>
+
+        <!--#endregion-->
+    </Application.Resources>
+</Application>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:LetsGo.Controls;assembly=LetsGo"
+             xmlns:cadastro="clr-namespace:LetsGo.ViewModels.Cadastro;assembly=LetsGo"
+             x:Class="LetsGo.Views.Cadastro.CadastroPage">
+    <ContentPage.BindingContext>
+        <cadastro:CadastroViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF">
+            <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="24" CornerRadius="0">
+                <Label Text="Let's Go" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <StackLayout Margin="15,10" StyleClass="Conteudo">
+                <StackLayout>
+
+                    <controls:InputControl
+                        NomeDoCampo="Email" 
+                        Valor="{Binding Email}"
+                        CorDaBorda="DarkGray" />
+
+                    <controls:InputControl
+                        NomeDoCampo="Senha"
+                        Valor="{Binding Senha}"
+                        CorDaBorda="DarkGray"
+                        IsPassword="True" />
+                </StackLayout>
+                <controls:RoundedButtonControl Texto="Cadastrar" Command="{Binding CadastrarCommand}"/>
+                <controls:RoundedButtonControl Texto="Voltar" Tipo="Secundario" Command="{Binding IrParaOLogin}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
